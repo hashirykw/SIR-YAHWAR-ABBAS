@@ -1,6 +1,6 @@
 # Sir Yawar Abbas · Physics website (demo)
 
-A multi-page site for Sir Yawar Abbas: Cambridge O Level Physics 5054, IGCSE Physics 0625 and AS & A Level Physics 9702, Karachi and online. Every page is one self-contained HTML file in one flat folder, with the logo, favicon and icons embedded inside it. The only shared file is `config.js`, which holds the settings.
+A multi-page site for Sir Yawar Abbas: Cambridge O Level Physics 5054, IGCSE Physics 0625 and AS & A Level Physics 9702, Karachi and online. Every page is a light HTML file. Everything they load lives in the `assets/` folder in this repo: the shared CSS and JS, three.js, GSAP and Lenis, the fonts, the logo and the portrait. Nothing loads from outside sites. `config.js` holds the settings.
 
 Built by Nexlyr Solutions on the same system as the Sir Rohail Ahmed and Sir Sohail Ahmed sites: VERZISH-style preloader and page curtain, a 3D particle background that changes shape section by section (atom, interference field, magnet field lines, lens, orbits, prism, spring, E = mc², decay curve), stacking cards, and a dark night-blue / electric-cyan / silver palette.
 
@@ -21,6 +21,7 @@ Built by Nexlyr Solutions on the same system as the Sir Rohail Ahmed and Sir Soh
 | `contact.html` | Enrolment form that opens a ready-written WhatsApp message, places, FAQ |
 | `404.html` | Not-found page |
 | `config.js` | **The only file you edit**: WhatsApp number, social links, campuses, real results and reviews |
+| `assets/` | `site.css` and `app.js` (shared by every page, cached once), `db.js` (portal demo), `vendor/` (three.js, GSAP, ScrollTrigger, Lenis), `fonts/` (Big Shoulders Display, Archivo, Geist Mono), `img/` (logo, mark, portrait) |
 | `og.jpg` | Share image for WhatsApp and social previews (1200 × 630) |
 | `vercel.json`, `robots.txt`, `sitemap.xml` | Hosting and search files |
 
@@ -35,10 +36,16 @@ Built by Nexlyr Solutions on the same system as the Sir Rohail Ahmed and Sir Soh
    - The Ambitions and The Classroom: academy announcements of his Physics classes.
    - "20+ years" = Lyceum from 2006.
    Remove any place he no longer teaches at from `campuses` in `config.js` and the matching card in `about.html`.
-4. **Portrait.** The cut-out comes from the photo you supplied, with the background removed. It is embedded in the HTML (home hero, About page, preloader).
+4. **Portrait.** The cut-out comes from the photo you supplied, with the background removed. It is `assets/img/yawar-abbas.webp`.
 5. **Social links.** `instagram`, `facebook`, `youtube`, `linkedin` are blank, so they are hidden. Fill any he wants shown.
 6. **Results and reviews.** `RESULTS` and `REVIEWS` are empty, so nothing invented appears.
 7. **Domain.** Pages use `https://sir-yawar-abbas.nexlyr.solutions`. Find and replace if the address changes.
+
+## Speed
+
+- The shared CSS, JS, fonts and images are cached by the browser for a year; every URL ends in `?v=` plus a content hash, so an update always reaches visitors.
+- Text is never hidden while the page loads. Anything on screen at load shows at once; only content further down eases in as you scroll.
+- The 3D background loads after the page is ready and fades in. The preloader plays once per visit, for about 1.3 seconds. Page changes use the browser's own view transition, with no blank flash.
 
 ## Notes on content
 
