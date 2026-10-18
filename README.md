@@ -35,7 +35,7 @@ Built by Nexlyr Solutions on the same system as the Sir Rohail Ahmed and Sir Soh
    - The Ambitions and The Classroom: academy announcements of his Physics classes.
    - "20+ years" = Lyceum from 2006.
    Remove any place he no longer teaches at from `campuses` in `config.js` and the matching card in `about.html`.
-4. **Portrait.** No photo was available, so the hero uses an oscilloscope and the About page an ID card. A cut-out portrait can be added later.
+4. **Portrait.** The cut-out comes from the photo you supplied, with the background removed. It is embedded in the HTML (home hero, About page, preloader).
 5. **Social links.** `instagram`, `facebook`, `youtube`, `linkedin` are blank, so they are hidden. Fill any he wants shown.
 6. **Results and reviews.** `RESULTS` and `REVIEWS` are empty, so nothing invented appears.
 7. **Domain.** Pages use `https://sir-yawar-abbas.nexlyr.solutions`. Find and replace if the address changes.
